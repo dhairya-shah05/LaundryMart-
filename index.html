@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laundry Mart</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <nav class="nav-container">
+            <h1>LaundryMart</h1>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#booking-sect">SERVICES</a></li>
+                <li><a href="#about-us">ABOUT US</a></li>
+                <li><a href="#footer">CONTACT US</a></li>
+            </ul>
+            <button class="username-btn">Username</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-sect">
+            <div class="hero-left">
+                <h1>Revitalize Your Clothes With Expert <span>Laundry Services!</span></h1>
+                <p>From premium dry cleaning to swift wash and fold, we deliver care and convinience. Schedule a pickup
+                    and rediscover the freshness of your clothes today!</p>
+                <a href="#booking-sect"><i class="ri-store-line"></i>Book a service today!</a>
+            </div>
+            <div class="hero-right">
+                <img src="img/Washing machine.png" alt="">
+            </div>
+        </section>
+
+        <section class="achievements">
+            <div class="achievement-heading">
+                <h1>Our Achievements</h1>
+            </div>
+            <div class="achievement-container">
+                <ul class="achievement-list">
+                    <li>
+                        <h4>15+</h4>
+                        <p>Services</p>
+                    </li>
+                    <li>
+                        <h4>240+</h4>
+                        <p>Happy Customers</p>
+                    </li>
+                    <li>
+                        <h4>2+ Yrs</h4>
+                        <p>Experience</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="booking-sect" id="booking-sect">
+            <div class="left-service-container">
+                <div class="service-header">
+                    <h1>Our Services</h1>
+                    <p>Click on 'Add Item' button to add an iten to your cart</p>
+                </div>
+                <hr>
+                <ul>
+                    <li>
+                        <div>Dry Cleaning - <span>₹200.00</span></div>
+                        <div>
+                            <button class="add-btn" data-price="200.00" data-name="Dry Cleaning">Add Item
+                                &nbsp;<i class="ri-shopping-cart-2-line"></i></button>
+                        </div>
+                    </li>
+                    <li>
+                        <div>Wash & Fold - <span>₹100.00</span></div>
+                        <div>
+                            <button class="add-btn" data-price="100.00" data-name="Washing & Fold">Add Item
+                                &nbsp;<i class="ri-shopping-cart-2-line"></i></button>
+                        </div>
+                    </li>
+                    <li>
+                        <div>Ironing - <span>₹50.00</span></div>
+                        <div><button class="add-btn" data-price="50.00" data-name="Ironing">Add Item
+                                &nbsp;<i class="ri-shopping-cart-2-line"></i></button></div>
+                    </li>
+                    <li>
+                        <div>Stain Removal - <span>₹500.00</span></div>
+                        <div><button class="add-btn" data-price="500.00" data-name="Stain Removal">Add Item
+                                &nbsp;<i class="ri-shopping-cart-2-line"></i></button></div>
+                    </li>
+                    <li>
+                        <div>Leather & Suede Cleaning - <span>₹999.00</span></div>
+                        <div><button class="add-btn" data-price="999.00" data-name="Leather & Suede Cleaning">Add Item
+                                &nbsp;<i class="ri-shopping-cart-2-line"></i></button></div>
+                    </li>
+                    <li>
+                        <div>Wedding Dress Cleaning - <span>₹2800.00</span></div>
+                        <div><button class="add-btn" data-price="2800.00" data-name="Wedding Dress Cleaning">Add Item
+                                &nbsp;<i class="ri-shopping-cart-2-line"></i></button></div>
+                    </li>
+                </ul>
+                <hr>
+                <div class="message">
+                    <i class="ri-information-line"></i>
+                    <p>Add the item to cart and book now</p>
+                </div>
+            </div>
+            <div class="right-cart-container">
+                <div class="cart-items">
+                    <div class="cart-heading">
+                        <h1>Added Items</h1>
+                        <div class="item-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>S. No.</th>
+                                        <th>Service Name</th>
+                                        <th>Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tableRows">
+                                    <tr id="empty-row" class="empty-row">
+                                        <td colspan="3" class="item-data">No Items Added</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="total">
+                        <h3>Total</h3>
+                        <p id="totalAmount">₹0</p>
+                    </div>
+                </div>
+
+                <div class="booking-form">
+                    <h3>Book Now</h3>
+                    <form action="" id="customer-detail">
+                        <div class="name-container">
+                            <label for="name">Full Name</label>
+                            <input type="text" name="name" id="name" placeholder="John Doe">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-grp">
+                                <label for="customerEmail">Email ID</label>
+                                <input type="email" name="email" id="customerEmail" placeholder="xyz@example.com">
+                            </div>
+
+                            <div class="form-grp">
+                                <label for="phone-number">Phone Number</label>
+                                <input type="tel" id="phone-number" name="phone" placeholder="0000000000">
+                                <input type="hidden" name="items" id="items">
+                                <input type="hidden" name="total" id="total">
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <button id="booknow">Book Now</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-us" id="about-us">
+            <div class="about-item">
+                <img src="img/washing-machine-logo.png" alt="services">
+                <h2>Premium Services</h2>
+                <p>Elevate your wardrobe with our meticulous dry cleaning, ensuring garments look and feel as good as
+                    new.</p>
+            </div>
+            <div class="about-item">
+                <img src="img/support.png" alt="support">
+                <h2>Quick Support</h2>
+                <p>We're commited to providing prompt solution to ensure your experience is smooth and worry-free.</p>
+            </div>
+            <div class="about-item">
+                <img src="img/delivered.png" alt="delivered">
+                <h2>Hassle Free Delivery</h2>
+                <p>Enjoy Seeamless service with our convenient pickup and delivery options, tailored to your schedule.
+                </p>
+            </div>
+            <div class="about-item">
+                <img src="img/affordable.png" alt="cheap">
+                <h2>Affordable Prices</h2>
+                <p>Experience exceptional care without breaking the bank - our affordable prices make laundry day
+                    stress-free.</p>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <h1>Subscribe to our newsletter</h1>
+            <div class="contact-details">
+                <form action="">
+                    <input type="text" name="" id="fullname" placeholder="Full Name">
+                    <input type="email" id="newsletterEmail" placeholder="Email">
+                </form>
+                <div class="subscribe-btn">
+                    <button class="subscribe" id="subscribe">Subscribe</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="footer">
+        <div class="site-about footer-item">
+            <h1>LaundryMart</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit illo maiores tempore quo nam harum
+                    quam accusamus maxime alias dolores.
+                </p>
+        </div>
+
+        <div class="imp-links footer-item">
+            <h2>Important Links</h2>
+            <ul>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#footer">Contact Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Refund Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="site-contact footer-item">
+            <h2>Contact Us</h2>
+            <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">laundry.mart@email.com</a>
+            <p class="contact-number">
+                +91 93874 17491
+            </p>
+        </div>
+
+        <div class="social footer-item">
+            <h2>Follow Us</h2>
+            <div class="social-logo">
+                <i class="ri-instagram-line"></i>
+                <i class="ri-facebook-circle-line"></i>
+                <i class="ri-twitter-x-line"></i>
+                <i class="ri-youtube-line"></i>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="email.js"></script>
+</body>
+
+</html>
