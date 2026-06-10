@@ -37,33 +37,43 @@ for (let i = 0; i < buttons.length; i++) {
                 <td>${serviceName}</td>
                 <td>${servicePrice}</td>`;
             tableRows.appendChild(row);
-            total+=Number(servicePrice);
-            document.getElementById("totalAmount").innerText="₹" + total;
+            total += Number(servicePrice);
+            document.getElementById("totalAmount").innerText = "₹" + total;
         }
-        else{
-            btn.innerHTML='Add Item <i class="ri-shopping-cart-2-line"></i>';
-            btn.style.backgroundColor='rgba(39, 255, 39, 0.295)';
-            btn.style.color='rgb(0, 185, 31)';
-            btn.dataset.added="false";
-            const tableRows=document.getElementById("tableRows");
-            const removeItem=tableRows.children;
-            for(let j=0; j<removeItem.length; j++) {
-                if(removeItem[j].dataset.serviceName===serviceName) {
+        else {
+            btn.innerHTML = 'Add Item <i class="ri-shopping-cart-2-line"></i>';
+            btn.style.backgroundColor = 'rgba(39, 255, 39, 0.295)';
+            btn.style.color = 'rgb(0, 185, 31)';
+            btn.dataset.added = "false";
+            const tableRows = document.getElementById("tableRows");
+            const removeItem = tableRows.children;
+            for (let j = 0; j < removeItem.length; j++) {
+                if (removeItem[j].dataset.serviceName === serviceName) {
                     tableRows.removeChild(removeItem[j]);
                     break;
                 }
             }
-            total-=Number(servicePrice);
-            document.getElementById("totalAmount").innerText="₹"+total;
+            total -= Number(servicePrice);
+            document.getElementById("totalAmount").innerText = "₹" + total;
             updateSerialNumbers();
-            if(tableRows.children.length===0) {
-                const emptyRow=document.createElement("tr");
-                emptyRow.id="empty-row";
-                emptyRow.innerHTML=`<td colspan="3">No Item Added</td>`;
-                emptyRow.style.textAlign='center';
+            if (tableRows.children.length === 0) {
+                const emptyRow = document.createElement("tr");
+                emptyRow.id = "empty-row";
+                emptyRow.innerHTML = `<td colspan="3">No Item Added</td>`;
+                emptyRow.style.textAlign = 'center';
                 tableRows.appendChild(emptyRow);
             }
         }
 
     })
 }
+
+const menuBtn = document.querySelector(".menu-btn");
+const navLinks = document.querySelector(".nav-links");
+console.log(menuBtn);
+console.log(navLinks);
+
+menuBtn.addEventListener("click", () => {
+    console.log("clicked");
+    navLinks.classList.toggle("active");
+});

@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto';
 }
 
-body{
+body {
     background-color: aliceblue;
 }
 
 /* Header Section */
-.nav-container{
+.nav-container {
+    position: relative;
     padding: 0 80px;
     height: 10vh;
     display: flex;
@@ -20,29 +22,38 @@ body{
     background-color: white;
     gap: 20px;
 }
-.nav-container h1{
+
+.menu-btn {
+    display: none;
+}
+
+.nav-container h1 {
     color: rgb(69, 69, 255);
 }
-.nav-container ul{
+
+.nav-container ul {
     list-style: none;
     display: flex;
     gap: 40px;
     font-weight: 600;
     transition: 0.3s ease;
 }
-.nav-container ul li a{
+
+.nav-container ul li a {
     text-decoration: none;
     color: rgb(51, 51, 51);
     padding: 10px 15px;
     transition: 0.3s;
     border-radius: 10px;
 }
-.nav-container ul li a:hover{
+
+.nav-container ul li a:hover {
     background-color: rgba(81, 171, 255, 0.808);
     color: white;
     cursor: pointer;
 }
-.username-btn{
+
+.username-btn {
     padding: 10px 20px;
     border: none;
     background-color: #0077ff1f;
@@ -54,14 +65,15 @@ body{
     cursor: pointer;
     transition: 0.3s ease;
 }
-.username-btn:hover{
+
+.username-btn:hover {
     background-color: rgba(97, 205, 255, 0.671);
     color: rgb(50, 140, 201);
 }
 
 /* Hero Section */
-.hero-sect{
-    padding: 4px 80px;
+.hero-sect {
+    padding: 40px 80px;
     background-color: white;
     display: flex;
     gap: 20px;
@@ -69,22 +81,26 @@ body{
     align-items: center;
     height: 75vh;
 }
-.hero-left{
+
+.hero-left {
     width: 40%;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.hero-left h1{
+
+.hero-left h1 {
     font-size: 4rem;
     line-height: 1.5;
     letter-spacing: 1px;
     color: rgb(53, 53, 53);
 }
-.hero-left h1 span{
+
+.hero-left h1 span {
     color: rgb(74, 158, 255);
 }
-.hero-left p{
+
+.hero-left p {
     font-size: 1.8rem;
     line-height: 1.5;
     letter-spacing: 1px;
@@ -92,6 +108,7 @@ body{
     color: rgb(87, 87, 87);
     font-weight: 450;
 }
+
 .hero-left a:link,
 .hero-left a:visited {
     display: inline-block;
@@ -105,22 +122,25 @@ body{
     border-radius: 10px;
     transition: background-color 0.3s ease;
 }
-.hero-left a:hover{
+
+.hero-left a:hover {
     background-color: rgba(0, 140, 255, 0.74);
 }
-.hero-right{
+
+.hero-right {
     width: 40%;
     justify-content: center;
     display: flex;
 }
-.hero-right img{
+
+.hero-right img {
     width: 100%;
     height: auto;
     justify-self: center;
 }
 
 /* Achievement Section */
-.achievements{
+.achievements {
     height: 15vh;
     background-color: rgb(16, 111, 255);
     color: white;
@@ -128,23 +148,28 @@ body{
     justify-content: space-around;
     align-items: center;
 }
-.achievement-heading{
+
+.achievement-heading {
     width: 30%;
 }
-.achievement-heading h1{
+
+.achievement-heading h1 {
     font-size: 3rem;
 }
-.achievement-container{
+
+.achievement-container {
     width: 50%;
 }
-.achievement-list{
+
+.achievement-list {
     list-style: none;
     display: flex;
     gap: 20px;
     justify-content: space-around;
     font-size: 1.5rem;
 }
-.achievement-list li::after{
+
+.achievement-list li::after {
     content: "";
     width: 2px;
     transform: translateY(-50%);
@@ -155,14 +180,15 @@ body{
 }
 
 /* Cart Section */
-.booking-sect{
+.booking-sect {
     display: flex;
     gap: 30px;
     height: 100vh;
     justify-content: center;
     align-items: center;
 }
-.left-service-container{
+
+.left-service-container {
     height: 80%;
     display: flex;
     flex-direction: column;
@@ -173,23 +199,28 @@ body{
     width: 35%;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.service-header{
+
+.service-header {
     color: rgb(51, 51, 51);
 }
-.service-header h1{
+
+.service-header h1 {
     font-size: 2.2rem;
     margin-bottom: 10px;
 }
-.service-header p{
+
+.service-header p {
     font-size: 1.2rem;
     margin-bottom: 20px;
 }
-.left-service-container ul{
+
+.left-service-container ul {
     list-style: none;
     display: flex;
     flex-direction: column;
 }
-.left-service-container ul li{
+
+.left-service-container ul li {
     display: flex;
     justify-content: space-between;
     font-size: 1.1rem;
@@ -198,7 +229,8 @@ body{
     align-items: center;
     color: rgb(51, 51, 51);
 }
-.add-btn{
+
+.add-btn {
     width: 150px;
     padding: 10px 0;
     border: none;
@@ -211,18 +243,21 @@ body{
     /* color: rgb(255, 0, 0); */
     cursor: pointer;
 }
-.add-btn i{
+
+.add-btn i {
     font-size: 20px;
     color: rgba(53, 53, 53, 0.767);
 }
-.message{
+
+.message {
     display: flex;
     gap: 10px;
     font-size: 1.1rem;
     color: blue;
     align-items: center;
 }
-.right-cart-container{
+
+.right-cart-container {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -230,7 +265,8 @@ body{
     height: 80vh;
     justify-content: space-between;
 }
-.cart-items{
+
+.cart-items {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -241,17 +277,20 @@ body{
     border-radius: 20px;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.cart-heading{
+
+.cart-heading {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 85%;
 }
-.cart-heading h1{
+
+.cart-heading h1 {
     color: rgb(51, 51, 51);
     text-align: center;
 }
-.cart-heading table{
+
+.cart-heading table {
     height: 300px;
     padding-top: 10px;
     width: 100%;
@@ -262,47 +301,55 @@ body{
     border: 1px solid #e0e0e0;
     /* margin-bottom: 40px; */
 }
+
 .cart-heading thead {
     display: table;
     width: 100%;
     table-layout: fixed;
 }
+
 .cart-heading tbody {
     display: block;
-    height: 280px;   
+    height: 280px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    overflow-y: auto;    
+    overflow-y: auto;
     width: 100%;
 }
+
 .cart-heading thead tr,
 .cart-heading tbody tr {
     display: table;
     width: 100%;
     table-layout: fixed;
 }
+
 .cart-heading th,
 .cart-heading td {
     padding: 0.75rem 1.5rem;
     text-align: left;
     font-size: 0.95rem;
 }
+
 #empty-row td {
     text-align: center;
     color: #888;
     border-top: 1px solid #e0e0e0;
     border-bottom: 1px solid #e0e0e0;
 }
-.item-table tbody{
+
+.item-table tbody {
     background-color: white;
 }
-.total{
+
+.total {
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 1.1rem;
 }
-.booking-form{
+
+.booking-form {
     height: 40%;
     padding: 20px 20px;
     background-color: white;
@@ -310,18 +357,21 @@ body{
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     color: rgb(51, 51, 51);
 }
-.booking-form h3{
+
+.booking-form h3 {
     margin-bottom: 20px;
     font-size: 1.2rem;
 }
-.name-container{
+
+.name-container {
     display: flex;
     flex-direction: column;
     gap: 5px;
     margin-bottom: 10px;
     text-align: left;
 }
-.name-container input{
+
+.name-container input {
     height: 40px;
     padding: 10px;
     border-radius: 10px;
@@ -329,17 +379,20 @@ body{
     color: rgb(51, 51, 51);
     background-color: rgba(161, 175, 255, 0.308);
 }
-.form-row{
+
+.form-row {
     display: flex;
     gap: 5px;
     justify-content: space-between;
 }
-.form-grp{
+
+.form-grp {
     display: flex;
     gap: 5px;
     flex-direction: column;
 }
-.form-grp input{
+
+.form-grp input {
     width: 300px;
     height: 40px;
     border-radius: 10px;
@@ -348,7 +401,8 @@ body{
     background-color: rgba(161, 175, 255, 0.308);
     padding: 10px;
 }
-#booknow{
+
+#booknow {
     width: 100%;
     height: 50px;
     border-radius: 15px;
@@ -360,7 +414,7 @@ body{
 }
 
 /* About Us Section */
-.about-us{
+.about-us {
     height: 30vh;
     background-color: white;
     display: flex;
@@ -370,7 +424,8 @@ body{
     align-items: center;
     padding: 40px 60px;
 }
-.about-item{
+
+.about-item {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -379,17 +434,19 @@ body{
     color: rgb(51, 51, 51);
     gap: 10px;
 }
-.about-item img{
+
+.about-item img {
     width: 100px;
 }
-.about-item p{
+
+.about-item p {
     text-align: center;
     font-size: 1.1rem;
     line-height: 1.5;
 }
 
 /* Subscription Section */
-.newsletter{
+.newsletter {
     height: 29vh;
     background-color: rgb(0, 140, 255);
     display: flex;
@@ -398,35 +455,40 @@ body{
     align-items: center;
     color: white;
 }
-.newsletter h1{
+
+.newsletter h1 {
     font-size: 3.5rem;
     display: flex;
     justify-content: flex-end;
 }
-.newsletter .contact-details{
+
+.newsletter .contact-details {
     display: flex;
     flex-direction: column;
     gap: 20px;
     justify-content: flex-start;
 }
 
-.contact-details form input{
+.contact-details form input {
     width: 300px;
     height: 60px;
-    border:1px solid white;
+    border: 1px solid white;
     background-color: rgb(101, 155, 255);
     color: white;
     padding: 20px;
     font-size: 1.2rem;
 }
-.contact-details form input::placeholder{
+
+.contact-details form input::placeholder {
     color: white;
 }
-.contact-details form{
+
+.contact-details form {
     display: flex;
     gap: 20px;
 }
-.subscribe-btn button{
+
+.subscribe-btn button {
     width: 300px;
     height: 60px;
     border: none;
@@ -438,7 +500,7 @@ body{
 }
 
 /* Footer */
-footer{
+footer {
     display: flex;
     gap: 40px;
     justify-content: space-between;
@@ -447,43 +509,223 @@ footer{
     height: 30vh;
     color: rgba(51, 51, 51, 0.795);
 }
-footer .footer-item{
+
+footer .footer-item {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.footer-item, h1, h2{
+
+.footer-item,
+h1,
+h2 {
     margin-bottom: 10px;
 }
-.site-about{
+
+.site-about {
     width: 20%;
     text-align: justify;
     font-size: 1.1rem;
 }
-.site-about p{
+
+.site-about p {
     line-height: 1.6;
 }
-.imp-links ul{
+
+.imp-links ul {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 10px;
     font-size: 1.2rem;
 }
-.imp-links ul li a{
+
+.imp-links ul li a {
     display: inline-block;
     text-decoration: none;
     color: rgba(51, 51, 51, 0.795);
     transition: 0.1s ease;
 }
-.imp-links ul li a:hover{
+
+.imp-links ul li a:hover {
     transform: scale(1.03);
 }
-.site-contact{
+
+.site-contact {
     font-size: 1.1rem;
 }
-.social .social-logo{
+
+.social .social-logo {
     display: flex;
     gap: 20px;
     font-size: 1.3rem;
+}
+
+@media (max-width: 768px) {
+    body {
+        width: 100%;
+    }
+
+    .username-btn {
+        display: none;
+    }
+
+    .nav-links {
+        display: none !important;
+    }
+
+    .menu-btn {
+        display: block;
+        border: none;
+        background: none;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    .nav-container{
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        width: 100%;
+        background: white;
+
+        flex-direction: column;
+        align-items: center;
+
+        gap: 20px;
+        padding: 20px 0;
+
+        display: none;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex !important;
+    }
+
+    .hero-sect {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: flex-start;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .hero-left {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero-left h1 {
+        font-size: 2.5rem;
+        line-height: 1.3;
+        letter-spacing: 1px;
+        color: rgb(53, 53, 53);
+    }
+    .hero-left p{
+        font-size: 1.3rem;
+        letter-spacing: 0;
+    }
+    .hero-right{
+        width: 100%;
+    }
+    .left-service-container ul li{
+        font-size: 1rem;
+        letter-spacing: 0;
+        line-height: 5rem;
+    }
+    .achievements{
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .achievement-heading{
+        width: 100%;
+        text-align: center;
+    }
+    .achievement-container{
+        display: flex;
+        width: 100%;
+    }
+    .achievement-list{
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .booking-sect{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+    }
+    .left-service-container{
+        width: 90%;
+    }
+    .right-cart-container{
+        width: 90%;
+    }
+    .about-us{
+        height: auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 30px;
+        align-items: center;
+        margin-top: 210px;
+        padding: 20px ;
+    }
+    .about-item{
+        width: 100%;
+    }
+    .about-item h2{
+        font-size: 1.3rem;
+    }
+    .newsletter{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+    .contact-details{
+        width: 100%;
+    }
+    .contact-details form{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-details form input{
+        width: 100%;
+    }
+    footer{
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 20px;
+    }
+    .footer-item{
+        width: 100%;
+    }
+    .site-about p{
+        width: 80%;
+    }
+    .form-row{
+        display: flex;
+        flex-direction: column;
+    }
+    .form-grp input{
+        width: 100%;
+    }
+    .booking-form{
+        height: auto;
+    }
 }
